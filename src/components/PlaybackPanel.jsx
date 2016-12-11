@@ -35,7 +35,7 @@ const PlaybackPanel = ({
       </div>
       <div className="column is-2">
         <span className="select">
-          <select onChange={onChangeSpeed} disabled={isActive}>
+          <select onChange={onChangeSpeed}>
             <option>Speed</option>
             {speeds.map(speed =>
               <option key={speed} value={speed}>{speed/1000}s/gen</option>,

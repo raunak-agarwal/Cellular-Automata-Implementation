@@ -194,6 +194,9 @@ class App extends React.Component {
 
   onChangeSpeed = (event) => {
     this.setState({ speed: event.target.value });
+    if (this.state.interval) {
+      this.onPlay();
+    }
   }
 
   onReset = () => {
