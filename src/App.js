@@ -1,5 +1,4 @@
 import React from 'react';
-import sprint from 'sprint-js';
 
 import './App.css';
 import 'bulma/css/bulma.css';
@@ -96,7 +95,7 @@ class App extends React.Component {
 
   clearAutomata = () => {
     this.setState({ lastState: undefined, automata: undefined });
-    sprint('#grid').html('');
+    gridElement.innerHTML = '';
   }
 
   updateAutomata = () => {

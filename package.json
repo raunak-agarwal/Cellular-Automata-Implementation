@@ -9,8 +9,7 @@
   "dependencies": {
     "bulma": "^0.2.3",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "sprint-js": "^0.1.0"
+    "react-dom": "^15.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
