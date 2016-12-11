@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function(){
     gridElement = document.getElementById('grid');
 }, false);
 
-/** Generic Components **/
-
 const HeaderAndProgress = ({ currentGeneration, generations, componentRefreshRand }) =>
   <div className="hero is-primary is-bold" style={{ marginBottom: 20 }}>
     <div className="hero-body">
