@@ -89,6 +89,7 @@ class App extends React.Component {
       speed: 500,
       visibleCrypto: false,
       visibleDiag: false,
+      displayLines: true,
       componentRefreshRand: undefined,
     }
   }
@@ -147,6 +148,10 @@ class App extends React.Component {
 
   onToggleDiag = () => {
     this.setState({ visibleDiag: !this.state.visibleDiag });
+  }
+
+  onToggleLineDisplay = () => {
+    this.setState({ displayLines: !this.state.displayLines });
   }
 
   onChangeGenerations = (event) => {
@@ -224,6 +229,7 @@ class App extends React.Component {
       automata: { currentGeneration, generations, currentState, columns },
       cellOn,
       cellOff,
+      displayLines,
     } = this.state;
 
     const currentGenerationInt = parseInt(currentGeneration, 10);
@@ -243,8 +249,13 @@ class App extends React.Component {
       cells.push(currentState[i] ? cellOn : cellOff);
     }
     cells.push('<br /></span>');
-    reusableContainer.innerHTML = cells.join('');
-    gridElement.appendChild(reusableContainer.firstChild);
+
+    if (displayLines) {
+      reusableContainer.innerHTML = cells.join('');
+      gridElement.appendChild(reusableContainer.firstChild);
+    } else {
+      gridElement.innerHTML = cells.join('');
+    }
 
     this.state.automata.next();
   }
@@ -270,6 +281,7 @@ class App extends React.Component {
       onToggleCrypto,
       onToggleDiag,
       onToggleRandom,
+      onToggleLineDisplay,
       onChangeDecimalRule,
       onChangeGenerations,
       onChangeSeed,
@@ -304,6 +316,7 @@ class App extends React.Component {
       />
       <br />
       <PlaybackPanel
+        onToggleLineDisplay={onToggleLineDisplay}
         onToggleEnabled={onToggleEnabled}
         onToggleCrypto={onToggleCrypto}
         visibleCrypto={visibleCrypto}

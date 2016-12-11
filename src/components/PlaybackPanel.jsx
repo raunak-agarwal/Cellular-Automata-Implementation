@@ -18,6 +18,7 @@ const PlaybackPanel = ({
   onToggleEnabled,
   onToggleCrypto,
   visibleCrypto,
+  onToggleLineDisplay,
 }) =>
   <div className="container" style={{ display: automataEnabled ? 'block' : 'none'}}>
     <div className="columns is-multiline has-text-centered">
@@ -26,6 +27,7 @@ const PlaybackPanel = ({
         <Button btnClass="is-dark" icon="user-secret" func={onToggleCrypto}>{visibleCrypto ? 'hide' : 'show'} crypto</Button>
       </div>
       <div className="column is-6">
+        <Button btnClass="is-dark" icon="magic" func={onToggleLineDisplay} />
         <Button btnClass="is-primary" icon="fast-backward" func={onReset}>Reset</Button>
         <Button btnClass="is-primary" icon={isActive ? 'pause' : 'play'} func={isActive ? onPause : onPlay} disabled={isLastGeneration}>{isActive ? 'Pause' : 'Play'}</Button>
         <Button btnClass="is-primary" icon="forward" func={iterate} disabled={isLastGeneration}>Step</Button>
