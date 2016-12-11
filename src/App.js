@@ -192,10 +192,11 @@ class App extends React.Component {
   }
 
   onChangeSpeed = (event) => {
-    this.setState({ speed: event.target.value });
-    if (this.state.interval) {
-      this.onPlay();
-    }
+    this.setState({ speed: event.target.value }, () => {
+      if (this.state.interval) {
+        this.onPlay();
+      }
+    });
   }
 
   onReset = () => {
@@ -222,8 +223,7 @@ class App extends React.Component {
 
   onFastForward = () => {
     this.onPause();
-    this.setState({ speed: 100 });
-    setTimeout(() => { this.onPlay() }, 5);
+    this.setState({ speed: 100 }, () => { this.onPlay() });
   }
 
   iterate = () => {
