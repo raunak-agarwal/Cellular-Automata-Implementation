@@ -1,0 +1,31 @@
+{
+  "name": "react-cellular-automata",
+  "version": "0.1.0",
+  "description": "react and javascript implementation of elementary cellular automata",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.3"
+  },
+  "dependencies": {
+    "bulma": "^0.2.3",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "sprint-js": "^0.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihalgonsalves/react-cellular-automata.git"
+  },
+  "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nihalgonsalves/react-cellular-automata/issues"
+  },
+  "homepage": "https://nihalgonsalves.com/dev/react-cellular-automata/"
+}
