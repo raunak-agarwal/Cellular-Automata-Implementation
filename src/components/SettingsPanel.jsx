@@ -7,7 +7,7 @@ import { pad } from '../lib/util';
 import Button from './Button';
 
 // preset binary rules to display in the dropdown
-const presetRules = [30, 60, 90, 50, 22, 190, 5];
+const presetRules = [30, 60, 90, 50, 22, 190, 5, 37];
 
 const GenerationControl = ({ onChange, value }) =>
   <p className="control has-icon is-expanded">
